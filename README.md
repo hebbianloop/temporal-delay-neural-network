@@ -10,6 +10,21 @@ phoneme and consonant recognition from spectrograms.
 Presented as a poster at the **New York Academy of Sciences (NYAS), 2016**
 ([`NYAS-2016-POSTER.pdf`](NYAS-2016-POSTER.pdf)).
 
+## Paper
+
+> **A Neural Architecture for Unsupervised Temporal Pattern Recognition**
+> Shady El Damaty (Neuroscience) & James Maguire (Linguistics), Georgetown University, 2016.
+> 📄 [`paper/nips_2016.pdf`](paper/nips_2016.pdf) · LaTeX source in [`paper/`](paper/)
+
+*Abstract.* We present a novel neuron architecture for unsupervised, time-dependent neural
+networks. We introduce a new **delay function based on a mixture of Beta distributions**,
+addressing limitations of prior delay-learning work, and a new method for **thresholding a
+neuron's potential** using input activations from both before and after the neuron spikes.
+Preliminary results on two patterns show very high performance on an unsupervised pattern
+**segmentation** task, learning in both clean and noisy environments. The approach builds on
+time-delay neural networks (Waibel et al. 1989) and spike-timing-dependent plasticity
+(Izhikevich 2006) toward *fully unsupervised* learning of time delays.
+
 ## Idea
 
 Classic artificial neurons sum weighted inputs instantaneously. Real axons impose
