@@ -1,0 +1,27 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{algpseudocode} %algorithms
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters\begin{document}
+\begin{algorithmic}
+\Function{Add Weight}{w}
+\For{$s \in \{s \ | \ \tau_s \ \in \phi \} $}
+\If{$| \ \tau_{s_i} \ | > |\vec{A_{s_i}}|$} \Comment{\# of activations $>$ than \# of distributions}
+\State INCREASE($\boldsymbol{ \ \alpha_{s_i}}, \ |\ \tau_{s_i}\ | \ $) 
+\State \uppercase{Increase}($\boldsymbol{\ \beta_{s_i}}, \ |\ \tau_{s_i}\ | \ $)
+\EndIf
+\State $count \gets 0$
+\While{$count < \ |\  \tau_{s_i} \ | \ $}
+\State $\alpha, \ \beta \gets $ORDERED($\boldsymbol{\ \alpha_{s_i}},\boldsymbol{\ \beta_{s_i}})[count]$
+\State $ratio_\alpha \gets \alpha/(\alpha + \beta)$
+\State $ratio_\beta \gets \beta/(\alpha + \beta)$
+\State $\alpha \gets \alpha + w\ *$ \ ratio$_\alpha$
+\State $\beta \gets \beta + w\ *$ \ ratio$_\beta$
+\State $count \gets count + 1$
+\EndWhile
+\EndFor
+\EndFunction
+\label{PC:AddW}
+\end{algorithmic}
+\end{document}

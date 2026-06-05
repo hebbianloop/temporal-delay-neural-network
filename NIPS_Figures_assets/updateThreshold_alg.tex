@@ -1,0 +1,19 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{algpseudocode} %algorithms
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters\begin{document}
+\begin{algorithmic}
+\Function{Update Threshold}{}
+\If{$\eta * (h(t,\phi)+h(t,\psi))>\gamma$}
+\State $\gamma \gets \eta * (h(t,\phi) + h(t,\psi))$
+\EndIf
+\If{$h(t,\phi)>\gamma$}
+\State $\gamma \gets \eta * h(t,\phi)$
+%if the potential of the neuron exceeds gamma by only contributing functions
+% *** every time i fire, reset my threshold to 0.95 of my total current and if my total go with it
+\EndIf
+\EndFunction
+\end{algorithmic}
+\end{document}

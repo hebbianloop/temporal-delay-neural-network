@@ -1,0 +1,14 @@
+# Generated data & simulation outputs (regenerate with the build/sim scripts)
+py/Datasets/
+py/simulations/
+matlab/data/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor cruft
+.DS_Store
+~$*
+*.m~

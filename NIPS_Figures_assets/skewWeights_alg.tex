@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{algpseudocode} %algorithms
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters\begin{document}
+\begin{algorithmic}
+\Function{Skew}{}
+\For{$s\in \{ s \ | \ \tau_s \in \phi \}$}
+\State $counter\gets 0$
+\While{$counter<|\{\tau_{s_i} \in \phi\}|$}
+\State $\alpha, \ \beta = ORDERED (\boldsymbol{\alpha_{s_i}},\boldsymbol{\beta_{s_i}})[count]$
+\State skew$=x-((\alpha-1)/(\alpha+\beta-2))$
+\If{skew$<0$}\Comment{Peak of the distribution is to the right of $\tau_n$}
+\State redist$\gets \alpha \eta * -$skew \Comment{Move peak to the left}
+\State $\alpha \gets \alpha - redist$
+\State $\alpha \gets \beta + redist$
+\Else\Comment{Peak of the distribution is to the left of $\tau_n$}
+\State $redist\gets \eta\beta*skew$ \Comment{Move peak to the right}
+\State $\beta \gets \beta - redist$
+\State $\alpha \gets \alpha + redist$
+\EndIf
+\EndWhile
+\EndFor
+\EndFunction
+\label{PC:Skew}
+\end{algorithmic}
+\end{document}

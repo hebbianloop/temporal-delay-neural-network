@@ -1,0 +1,1 @@
+Any function added to this folder should only update the threshold when the neuron fires.

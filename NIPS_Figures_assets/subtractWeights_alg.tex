@@ -1,0 +1,22 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{algpseudocode} %algorithms
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters\begin{document}
+\begin{algorithmic}
+\Function{Subtract Weight}{}
+\State $w\gets 0 $
+\For{$s \in S$}
+\For{$\alpha_j,\beta_j,\in \boldsymbol{\alpha_{s_i}}, \boldsymbol{\beta_{s_i}}$}
+\State $w \gets w + \eta \alpha_j + \eta \beta_j$
+\State $\alpha_j\gets \alpha_j - \eta \alpha_j$
+\State $\beta_j\gets \beta_j - \eta \beta_j$
+\EndFor
+\EndFor
+\State $w \gets w/|\phi|$
+\State \Return $w$
+\EndFunction
+\label{PC:SubW}
+\end{algorithmic}
+\end{document}
